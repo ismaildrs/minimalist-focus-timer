@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/timer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Scripts -->
+    <script src="../scripts/values.js"></script>
+    <script src="../scripts/popup/utils.js"></script>
+
+    <script defer src="../components/SvgButton.js"></script>
+    <script defer src="../components/InfoTooltip.js"></script>
+
+    <script defer src="../scripts/popup/uiAdjust.js"></script>
+    <script defer src="../scripts/popup/buttons.js"></script>
+    <script defer src="../scripts/popup/index.js"></script>
+  </head>
+  <body>
+    <!-- Timer -->
+    <div class="circle-container-outer">
+      <!-- Circle drawing -->
+      <svg class="circle-container-inner">
+        <circle id="partialCircleBackground" cx="123px" cy="123px" r="120px" />
+        <circle id="partialCircle" cx="123px" cy="123px" r="120px" />
+      </svg>
+
+      <!-- Text in the center of circle drawing -->
+      <div class="circle-text-container">
+        <div id="sessionLabel"></div>
+        <div id="sessionTimeLeft"></div>
+
+        <div class="circle-text-session-rounds-container">
+          <div id="sessionCurrentRound"></div>
+          <div>sessions</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timer Controls -->
+    <div class="timer-controls-container">
+      <info-tooltip text="redo current session" direction="bottom">
+        <svg-button
+          id="timerSoftResetButton"
+          icon-name="softReset"
+          size="33px"
+        ></svg-button>
+      </info-tooltip>
+      <info-tooltip text="play / pause" direction="bottom">
+        <svg-button
+          id="timerPlayPauseButton"
+          icon-name="play"
+          size="40px"
+        ></svg-button>
+      </info-tooltip>
+      <info-tooltip text="skip current session" direction="bottom">
+        <svg-button
+          id="timerSkipButton"
+          icon-name="skip"
+          size="38px"
+        ></svg-button>
+      </info-tooltip>
+    </div>
+
+    <!-- At the bottom left -->
+    <info-tooltip text="start from session 1" direction="right">
+      <svg-button
+        id="timerHardResetButton"
+        icon-name="hardReset"
+        size="23px"
+      ></svg-button>
+    </info-tooltip>
+
+    <!-- At the bottom right -->
+    <a href="./settings/sessions.html">
+      <info-tooltip text="settings" direction="left">
+        <svg-button
+          id="settingsPageButton"
+          icon-name="settings"
+          size="20px"
+        ></svg-button>
+      </info-tooltip>
+    </a>
+
+    <!-- Settings Page -->
+    <!-- Go give a star to my github repo -->
+    <!-- <div id="settingsPage"> -->
+    <!--   <a -->
+    <!--     href="https://github.com/jameskimthing/pomodoro-focus-timer" -->
+    <!--     target="_blank" -->
+    <!--   > -->
+    <!--     <svg-button id="githubLink" icon-name="github" size="20px"> -->
+    <!--     </svg-button> -->
+    <!--   </a> -->
+    <!-- </div> -->
+  </body>
+</html>
