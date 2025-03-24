@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Minimalist Focus Timer",
+    "description": "A Clean and Concise Timer Using the Pomodoro Technique",
+    "version": "0.9.3",
+    "background": {
+        "page": "html/background.html"
+    },
+    "permissions": [
+        "storage",
+        "notifications"
+    ],
+    "icons": {
+        "32": "assets/icons/32.png",
+        "48": "assets/icons/48.png",
+        "96": "assets/icons/96.png",
+        "128": "assets/icons/128.png"
+    },
+    "browser_action": {
+        "default_popup": "html/index.html"
+    }
+}
